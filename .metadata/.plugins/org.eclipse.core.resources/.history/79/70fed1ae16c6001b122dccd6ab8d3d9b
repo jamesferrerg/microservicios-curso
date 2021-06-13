@@ -1,0 +1,16 @@
+package com.jamescurso.microservicios.app.cursos.models.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cursos")
+public class Curso {
+	
+	private Long id;
+	private String nombre;
+	private Date createAt;
+
+}

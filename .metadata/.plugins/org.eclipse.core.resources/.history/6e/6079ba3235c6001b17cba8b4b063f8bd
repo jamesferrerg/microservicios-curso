@@ -1,0 +1,12 @@
+package com.jamescurso.microservicios.usuarios.services;
+
+import org.springframework.stereotype.Service;
+
+import com.jamescurso.microservicios.commons.alumnos.models.entity.Alumno;
+import com.jamescurso.microservicios.commons.services.CommonServiceImpl;
+import com.jamescurso.microservicios.usuarios.models.repository.AlumnoRepository;
+
+@Service
+public class AlumnoServiceImpl extends CommonServiceImpl<Alumno, AlumnoRepository> implements AlumnoService {
+
+}

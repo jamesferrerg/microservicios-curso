@@ -1,0 +1,5 @@
+package com.jamescurso.microservicios.app.respuestas.controllers;
+
+public class RespuestaController {
+
+}

@@ -1,0 +1,5 @@
+package com.jamescurso.microservicios.app.examenes.models.entity;
+
+public class Examen {
+
+}

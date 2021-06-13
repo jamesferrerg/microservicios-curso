@@ -1,0 +1,5 @@
+package com.jamescurso.microservicios.commons.examenes.models.entity;
+
+public class Asignatura {
+
+}

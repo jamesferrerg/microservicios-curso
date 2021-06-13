@@ -1,0 +1,12 @@
+package com.jamescurso.microservicios.app.examenes.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jamescurso.microservicios.app.examenes.models.entity.Examen;
+import com.jamescurso.microservicios.app.examenes.services.ExamenService;
+import com.jamescurso.microservicios.commons.controllers.CommonController;
+
+@RestController
+public class ExamenController extends CommonController<Examen, ExamenService>{
+
+}

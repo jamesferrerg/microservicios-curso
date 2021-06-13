@@ -1,0 +1,9 @@
+package com.jamescurso.microservicios.app.examenes.services;
+
+import java.util.Optional;
+
+import com.jamescurso.microservicios.app.examenes.models.entity.Examen;
+
+public class ExamenServiceImpl extends CommonServiceImpl<Examen, ExamenRepository> implements ExamenService {
+
+}
