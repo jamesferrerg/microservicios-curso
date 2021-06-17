@@ -1,9 +1,0 @@
-package com.jamescurso.microservicios.app.cursos.services;
-
-import com.jamescurso.microservicios.app.cursos.models.entity.Curso;
-import com.jamescurso.microservicios.app.cursos.models.repository.CursoRepository;
-import com.jamescurso.microservicios.commons.services.CommonServiceImpl;
-
-public class CursoServiceImpl extends CommonServiceImpl<Curso, CursoRepository> implements CursoService {
-
-}

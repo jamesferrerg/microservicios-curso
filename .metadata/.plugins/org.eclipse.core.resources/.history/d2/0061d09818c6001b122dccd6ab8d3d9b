@@ -1,7 +1,0 @@
-package com.jamescurso.microservicios.app.cursos.services;
-
-import com.jamescurso.microservicios.commons.services.CommonService;
-
-public interface CursoService extends CommonService<E> {
-
-}

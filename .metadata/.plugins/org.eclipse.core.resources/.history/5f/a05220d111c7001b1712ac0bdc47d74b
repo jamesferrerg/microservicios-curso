@@ -1,5 +1,0 @@
-package com.jamescurso.microservicios.app.examenes.models.repository;
-
-public interface AsignaturaRepository extends CrudRepository<Asignatura, Long>{
-
-}
