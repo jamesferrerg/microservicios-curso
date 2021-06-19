@@ -47,13 +47,15 @@ public class AlumnoServiceImpl extends CommonServiceImpl<Alumno, AlumnoRepositor
 	@Override
 	@Transactional(readOnly = true)
 	public Iterable<Alumno> findAll() {
-		return repository.findAllByOrderByIdAsc();
+		// TODO Auto-generated method stub
+		return super.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly = true)
 	public Page<Alumno> findAll(Pageable pageable) {
-		return repository.findAllByOrderByIdAsc(pageable);
+		// TODO Auto-generated method stub
+		return super.findAll(pageable);
 	}
 	
 }
