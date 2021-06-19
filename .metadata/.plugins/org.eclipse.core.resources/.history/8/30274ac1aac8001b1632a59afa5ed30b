@@ -1,5 +1,0 @@
-package com.jamescurso.microservicios.app.respuestas.services;
-
-public interface RespuestaService {
-
-}

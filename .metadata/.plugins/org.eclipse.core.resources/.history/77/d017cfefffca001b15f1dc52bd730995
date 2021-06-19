@@ -1,8 +1,0 @@
-package com.jamescurso.microservicios.usuarios.client;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-@FeignClient(name = "microservicio-cursos")
-public interface CursoFeignClient {
-
-}

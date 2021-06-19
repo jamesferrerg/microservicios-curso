@@ -1,5 +1,0 @@
-package com.jamescurso.microservicios.usuarios.client;
-
-public interface CursoFeignClient {
-
-}
