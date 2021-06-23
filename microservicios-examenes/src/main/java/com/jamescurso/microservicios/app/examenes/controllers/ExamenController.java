@@ -2,6 +2,7 @@ package com.jamescurso.microservicios.app.examenes.controllers;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jamescurso.microservicios.app.examenes.services.ExamenService;
 import com.jamescurso.microservicios.commons.controllers.CommonController;
 import com.jamescurso.microservicios.commons.examenes.models.entity.Examen;
+import com.jamescurso.microservicios.commons.examenes.models.entity.Pregunta;
 
 @RestController
 public class ExamenController extends CommonController<Examen, ExamenService>{
@@ -49,14 +51,18 @@ public class ExamenController extends CommonController<Examen, ExamenService>{
 		});
 		El stream filter permite crea una lista con los filtrados
 		*/
-		examenDb.getPreguntas()
+		List<Pregunta> eliminadas = examenDb.getPreguntas()
 			.stream()
 			.filter(pdb -> !examen.getPreguntas().contains(pdb))
-			.forEach(p -> examenDb.removePregunta(p));
+			.collect(Collectors.toList());
+			
+		eliminadas.forEach(p -> examenDb.removePregunta(p));
 		
 		//eliminadas.forEach(p -> examenDb.removePregunta(p));
 		
 		examenDb.setPreguntas(examen.getPreguntas());
+		examenDb.setAsignaturaHija(examen.getAsignaturaHija());
+		examenDb.setAsignaturaPadre(examen.getAsignaturaPadre());
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(service.save(examenDb));
 	}

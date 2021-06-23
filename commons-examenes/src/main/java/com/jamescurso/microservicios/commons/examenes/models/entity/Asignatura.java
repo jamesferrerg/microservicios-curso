@@ -31,12 +31,12 @@ public class Asignatura {
 	otra vez). Para evitar este llamado se usa la propiedad
 	"JsonIgnoreProperties"
 	*/
-	@JsonIgnoreProperties(value = {"hijos"})
+	@JsonIgnoreProperties(value = {"hijos", "handler", "hibernateLazyInitializer"})
 	//Muchos elementos hijos pueden estar asignados al padre 
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Asignatura padre;
 
-	@JsonIgnoreProperties(value = {"padre"}, allowSetters = true)
+	@JsonIgnoreProperties(value = {"padre", "handler", "hibernateLazyInitializer"}, allowSetters = true)
 	// Una asignatura muchos hijos
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "padre", cascade = CascadeType.ALL)
 	private List<Asignatura> hijos;
